@@ -12,6 +12,9 @@
 		651E99FA1E45F34100357FC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651E99F81E45F34100357FC3 /* Main.storyboard */; };
 		651E99FC1E45F34100357FC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651E99FB1E45F34100357FC3 /* Assets.xcassets */; };
 		651E99FF1E45F34100357FC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651E99FD1E45F34100357FC3 /* LaunchScreen.storyboard */; };
+		654211131E45FC9600B01352 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 654211121E45FC9600B01352 /* pokemon.csv */; };
+		654211161E45FDDF00B01352 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654211151E45FDDF00B01352 /* Pokemon.swift */; };
+		654211191E46147200B01352 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654211181E46147200B01352 /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		651E99FB1E45F34100357FC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		651E99FE1E45F34100357FC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		651E9A001E45F34100357FC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654211121E45FC9600B01352 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		654211151E45FDDF00B01352 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		654211181E46147200B01352 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,33 @@
 		651E99F31E45F34100357FC3 /* pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
+				654211171E46143E00B01352 /* View */,
+				654211141E45FDCC00B01352 /* Model */,
 				651E99F41E45F34100357FC3 /* AppDelegate.swift */,
 				651E99F61E45F34100357FC3 /* ViewController.swift */,
 				651E99F81E45F34100357FC3 /* Main.storyboard */,
 				651E99FB1E45F34100357FC3 /* Assets.xcassets */,
+				654211121E45FC9600B01352 /* pokemon.csv */,
 				651E99FD1E45F34100357FC3 /* LaunchScreen.storyboard */,
 				651E9A001E45F34100357FC3 /* Info.plist */,
 			);
 			path = pokedex3;
+			sourceTree = "<group>";
+		};
+		654211141E45FDCC00B01352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				654211151E45FDDF00B01352 /* Pokemon.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		654211171E46143E00B01352 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				654211181E46147200B01352 /* PokeCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +151,7 @@
 			files = (
 				651E99FF1E45F34100357FC3 /* LaunchScreen.storyboard in Resources */,
 				651E99FC1E45F34100357FC3 /* Assets.xcassets in Resources */,
+				654211131E45FC9600B01352 /* pokemon.csv in Resources */,
 				651E99FA1E45F34100357FC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +163,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654211191E46147200B01352 /* PokeCell.swift in Sources */,
 				651E99F71E45F34100357FC3 /* ViewController.swift in Sources */,
 				651E99F51E45F34100357FC3 /* AppDelegate.swift in Sources */,
+				654211161E45FDDF00B01352 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +330,7 @@
 				651E9A051E45F34100357FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
