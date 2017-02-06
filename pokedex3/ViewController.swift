@@ -111,6 +111,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         view.endEditing(true)
         
+        var  poke: Pokemon!
+        
+        if inSearchMode {
+            
+            poke = filteredPokemon[indexPath.row]
+            
+        } else {
+            
+            poke = pokemons[indexPath.row]
+            
+        }
+        
+        performSegue(withIdentifier: "PokemonDetailVC", sender: poke)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -167,6 +181,19 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             inSearchMode = true
             filteredPokemon = pokemons.filter({$0.name.localizedStandardRange(of: searchBar.text!) != nil})
             collection.reloadData()
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destination as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
         }
         
     }
