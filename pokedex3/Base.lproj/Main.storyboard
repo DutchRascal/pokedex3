@@ -114,7 +114,7 @@
                                             <constraint firstItem="kdw-KC-mcK" firstAttribute="leading" secondItem="YER-z8-IrY" secondAttribute="leading" id="rkc-j7-zBH"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="nameLbl" destination="I4J-1r-U7L" id="XQn-jf-dUN"/>
+                                            <outlet property="nameLabel" destination="I4J-1r-U7L" id="XQn-jf-dUN"/>
                                             <outlet property="thumbImg" destination="kdw-KC-mcK" id="SxV-FN-o5l"/>
                                         </connections>
                                     </collectionViewCell>
@@ -181,6 +181,9 @@
                                             <constraint firstAttribute="height" constant="23" id="4TC-At-dZX"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="PUM-HN-5Ye" eventType="touchUpInside" id="vVv-NA-aFH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.44349336620000002" blue="0.40517044070000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -423,7 +426,18 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameLbl" destination="W1G-HA-2zk" id="t4L-aS-YCB"/>
+                        <outlet property="EvolutionLabel" destination="yLe-pl-8PY" id="2GT-7f-K77"/>
+                        <outlet property="attackLabel" destination="fdP-BQ-ZBT" id="Rwa-Gh-hyq"/>
+                        <outlet property="currentEvolutionImage" destination="IRc-G1-wBW" id="o8L-Wk-4KM"/>
+                        <outlet property="defenseLabel" destination="p2m-SJ-5bg" id="LnS-ic-Gji"/>
+                        <outlet property="descriptionLabel" destination="zch-TF-owS" id="kgH-7f-l7M"/>
+                        <outlet property="heightLabel" destination="ykz-v9-72G" id="sJW-A7-AGx"/>
+                        <outlet property="mainImage" destination="ma4-cZ-DEh" id="zeb-NI-MvI"/>
+                        <outlet property="nameLabel" destination="W1G-HA-2zk" id="t4L-aS-YCB"/>
+                        <outlet property="nextEvolutionImage" destination="31s-Vj-dq8" id="4zr-2C-O2r"/>
+                        <outlet property="pokedexLabel" destination="jgB-9E-aZx" id="hhn-PY-N0z"/>
+                        <outlet property="typeLabel" destination="6NI-Q8-GOz" id="HBq-6D-55c"/>
+                        <outlet property="weightLabel" destination="sGY-G0-NKf" id="d95-c8-yWv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhC-44-lIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
