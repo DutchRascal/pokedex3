@@ -78,7 +78,7 @@ class Pokemon {
     var pokedexId: Int {
         return _pokedexId
     }
-
+    
     
     
     init(name:String, pokedexId: Int) {
@@ -110,11 +110,22 @@ class Pokemon {
                     self._defense = "\(defense)"
                 }
                 
-                print(self._weight)
-                print(self._height)
-                print(self._attack)
-                print(self._defense)
-                
+                if let types = dict["types"] as? [Dictionary<String, String>] , types.count > 0 {
+                    
+                    self._type = ""
+                    
+                    if types.count > 0 {
+                        for x in 0..<types.count {
+                            if let name = types[x]["name"] {
+                                if x > 0 {
+                                    self._type! += "/"
+                                    
+                                }
+                                self._type! += "\(name.capitalized)"
+                            }
+                        }
+                    }
+                }
             }
             
             completed()
